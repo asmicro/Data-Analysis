@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analysis</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+    <div class="max-width-lg container main-cont-launch">
+        <div class="launch">
+
+            <div class="heading">
+                <h1>Right Launch Time Factors</h1>
+            </div>
+
+            <div class="sd">
+                <div class="abc">
+                    Average Fuel Consumption
+                </div>
+                <div class="abc">
+                    Child Safety Locks
+                </div>
+
+                <div class="abc">
+                    Anti-Lock Breaking System
+                </div>
+
+            </div>
+            <div class="sd">
+                <div class="abc">Airbags</div>
+                <div class="abc">High Speed Alert System</div>
+                <div class="abc">Electronic Brake-force Distribution</div>
+            </div>
+            <table>
+                <tr>
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th>Variant</th>
+                </tr>
+                {% for launch in launches %}
+                <tr>
+                    <td>{{ launch.make }}</td>
+                    <td>{{ launch.model }}</td>
+                    <td>{{ launch.variant }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class="power">
+
+            <div class="heading">
+                <h1>Power</h1>
+            </div>
+            <p class="design">
+                Cars are sorted on the basis of their powers(high to low) from the sample data set using sorting
+                algorithm
+            </p>
+            <div class="sf">
+                {% for i in range(length) %}
+                <div class="xyz">
+                    <div class="name">{{i+1}}. {{ a[i] }}</div>
+
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+</body>
+
+</html>
